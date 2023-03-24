@@ -4,12 +4,12 @@
 // // 6.
 
 Console.WriteLine("Введите день недели : ");
-string number1 = Console.ReadLine();
+string number1 = (Console.ReadLine());
 if (number1 == "1")
 {
     Console.WriteLine("Понедельник");
 }
-    if (number1 == "2")
+if (number1 == "2")
 {
     Console.WriteLine("Вторник");
 }
