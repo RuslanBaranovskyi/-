@@ -12,7 +12,7 @@ Console.WriteLine($"Случайное число из отрезка 10 - 99 =>
 int firstDigit = numberRandom / 10;
 int secondDigit = numberRandom % 10;
 
-// if (firstDigit> secondDigit)
+// if (firstDigit > secondDigit)
 // {
 //      Console.WriteLine ($"Наибольшая цифра числа => {firstDigit}");
 // }
@@ -22,5 +22,6 @@ int secondDigit = numberRandom % 10;
 // }
 
 int maxDigit = firstDigit > secondDigit ? firstDigit : secondDigit;
-Console.WriteLine ($"Наибольшая цифра числа => {secondDigit}");
+Console.WriteLine ($"Наибольшая цифра числа => {maxDigit}");
 
+//Math.Max(firstDigit, secondDigit);
