@@ -9,13 +9,13 @@ int randomNumber = new Random().Next(100, 1000);
 int newNumber = DeleteSecondDigit(randomNumber);
 
 Console.WriteLine($"Рандомное трехзначное число {randomNumber}");
-Console.WriteLine($"Полученное двухзначное число{newNumber}");
+Console.WriteLine($"Полученное двухзначное число {newNumber}");
 
 int DeleteSecondDigit(int randomNum)
 {
     int firstDigit = randomNum / 100;
     int thirdDigit = randomNum % 10;
-    int newNumber = (firstDigit * 10) + secondDigit;
+    int newNumber = (firstDigit * 10) + thirdDigit;
 
     return newNumber;
 }
