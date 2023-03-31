@@ -3,24 +3,35 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-void FillArray(int[] number)
+int Prompt(string message)
 {
-    int length = number.Length;
-    int index = 0;
-    while (index < length)
-    {
-        Console.WriteLine("Введите число: ");
-        number[index] = Convert.ToInt32(Console.ReadLine());
-    }
+    Console.Write(message);
+    string value = Console.ReadLine();
+    int result = Convert.ToInt32(value);
+    return result;
 }
-  void GetThirdDigit(int[] number, int thirdDigit)
+
+int GetThirdRank(int number)
 {
-    int count = number.Length;
-    int index = 0;
-    if (number.Length < 3);
+    while (number > 999)
+    {
+        number /= 10;
+    }
+    return number % 10;
+}
+
+bool ValidateNumber(int number)
+{
+    if (number < 100)
     {
         Console.WriteLine("Третьей цифры нет");
+        return false;
     }
+    return true;
 }
 
-
+int number = Prompt("Введите число > ");
+if (ValidateNumber(number))
+{
+    Console.WriteLine(GetThirdRank(number));
+}
