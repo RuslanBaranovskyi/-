@@ -14,7 +14,8 @@ int GetSecondDigit(int number)
     int number;
     Console.WriteLine("Введите трехзначное число: ");
     number = Convert.ToInt32(Console.ReadLine());
-
     int secondDigit = GetSecondDigit(number);
-
+    if (number < 100 || number >= 1000)
+    Console.WriteLine($"Вы ввели не трехзначное число, повторите попытку");
+    else
     Console.WriteLine($"Вторая цифра числа {number} равна {secondDigit}");
