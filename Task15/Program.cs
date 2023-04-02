@@ -5,15 +5,42 @@
 // 7 -> да
 // 1 -> нет
 
-void Week(int num);
-
-Console.WriteLine("Введите число:");
-int num = Convert.ToInt32(Console.ReadLine());
-if (num == 6 || num == 7)
+int Prompt(string message)
 {
-    Console.WriteLine("Выходной ");
+   Console.Write(message);
+   string value = Console.ReadLine();
+   int result = Convert.ToInt32(value);
+   return result; 
 }
-else
+
+bool IsWeekend(int weekDay)
 {
-    Console.WriteLine("Не выходной");
+    if(weekDay > 5)
+    {
+        return true;
+    }
+    return false;
+}
+
+bool ValidateWeekday(int number)
+{
+    if (number > 0 && number <= 7)
+    {
+        return true;
+    }
+    Console.WriteLine("Не день недели");
+    return false;
+}
+
+int weekDay = Prompt("Введите день недели >");
+if (ValidateWeekday(weekDay))
+{
+    if(IsWeekend(weekDay))
+    {
+        Console.WriteLine("Выходной день");
+    }
+    else
+    {
+        Console.WriteLine("Рабочий день");
+    }
 }
