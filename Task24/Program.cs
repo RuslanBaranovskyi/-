@@ -6,7 +6,7 @@ Console.WriteLine("Введите целое положительное числ
 int number = Convert.ToInt32(Console.ReadLine());
 
 int result = SumNumbers(number);
-Console.WriteLine($"Cуммf чисел от 1 до {number} = {result}");
+Console.WriteLine($"Cумма чисел от 1 до {number} = {result}");
 
 int SumNumbers(int num) //int num = number
 {
