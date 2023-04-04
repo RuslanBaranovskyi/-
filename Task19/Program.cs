@@ -4,23 +4,21 @@
 // 12821 -> да
 // 23432 -> да
 
-Console.Write("Введите пятизначное число");
-int[] n = Convert.ToInt32(Console.ReadLine());
 
+Console.WriteLine("Введите пятизначное число");
+string s=Console.ReadLine();
 
-int result = Polindrom(n);
+string result = Palindrom(s);
 Console.WriteLine(result);
 
-
-int Polindrom (int nNum)
+string Palindrom(string sStr)
 {
-    int len = n.Length;
-    for (int i = 0; i < len; i++)
-    {
-if (nNum[0] = nNum[4] && Nnum[2] = Nnum[3])
-return "да";
-return "нет";
-}
-}
 
+for(int i = 0; i < s.Length;)
+
+   if(sStr[0] == sStr[4] && sStr[1] == sStr[3]) return "да";
+   else 
+   return "нет";
+    
+}
 
