@@ -6,18 +6,14 @@
 
 
 Console.WriteLine("Введите пятизначное число");
-string s =Console.ReadLine();
+string s = Console.ReadLine();
 
 string result = Palindrom(s);
 Console.WriteLine(result);
 
 string Palindrom(string sStr)
 {
+      if (sStr[0] == sStr[4] && sStr[1] == sStr[3]) return "да";
+   else return "нет";
 
-for(int i = 0; i < s.Length;)
-
-   if(sStr[0] == sStr[4] && sStr[1] == sStr[3]) return "да";
-   return "нет";
-    
 }
-
