@@ -5,15 +5,25 @@
 // 23432 -> да
 
 
-Console.WriteLine("Введите пятизначное число");
-string s = Console.ReadLine();
+int number = ReadInt("Введите пятизначное число: ");
 
-string result = Palindrom(s);
-Console.WriteLine(result);
 
-string Palindrom(string sStr)
+Palindrom(number);
+
+void Palindrom(int n)
 {
-      if (sStr[0] == sStr[4] && sStr[1] == sStr[3]) return "да";
-   else return "нет";
+   
+   int firstDigit = n / 10000;
+   int secondDigit = (n / 1000) % 10; 
+   int fourthDigit = (n / 10) % 10; 
+   int fifthDigit = n % 10;
+   if ((firstDigit == fifthDigit) && (secondDigit == fourthDigit))
+   Console.WriteLine("Введенное число является палиндромом");
+   else Console.WriteLine("Введенное число не является палиндромом");
+}
 
+int ReadInt(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
 }
