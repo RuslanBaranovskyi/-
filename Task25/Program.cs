@@ -7,9 +7,9 @@ int numberB = ReadInt("Введите натуральную степень: ");
 if (numberB<1)
 Console.Write("Число B должно быть натуральным\n");
 else 
-ToDegree(numberA, numberB);
+Degree(numberA, numberB);
 
-void ToDegree(int a, int b)
+void Degree(int a, int b)
 {
 
     int result = 1;
