@@ -6,7 +6,7 @@
 
 Console.WriteLine("Введите целое число");
 int userNumber = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Двоичное число от числа {userNumber}равно {DecToBin(userNumber)}");
+Console.WriteLine($"Двоичное число от числа {userNumber} равно {DecToBin(userNumber)}");
 
 int DecToBin(int num)
 {
