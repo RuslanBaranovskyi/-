@@ -8,15 +8,23 @@
 
 
 
- Console.WriteLine("Введите номер строки ");
-    int x = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("Введите номер столбца ");
-    int y = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите количество строк ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите количество столбцов ");
+int n = Convert.ToInt32(Console.ReadLine());
 
-    int[,] matrixX = CreateMatrixRndInt(4, 4, 0, 10);
-    PrintArray(matrixX);
-    Console.WriteLine($"Элемент с введенными координатами равен {FindElement(matrixX)}");
 
+Console.WriteLine("Введите номер строки искомого элемента ");
+int x = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите номер столбца искомого элемента ");
+int y = Convert.ToInt32(Console.ReadLine());
+
+if (y < 0 || x < 0 || m < 0 || n < 0) Console.WriteLine("Число не может быть отрицательным ");
+
+
+int[,] matrixX = CreateMatrixRndInt(m, n, -10, 10);
+PrintArray(matrixX);
+Console.WriteLine($"Элемент с введенными координатами равен {FindElement(matrixX)}");
 
 
 int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
@@ -55,10 +63,10 @@ int FindElement(int[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (!(i +1 != x && j+1 != y)) ;
+            if (i == x || j == y);
         }
     }
-    return (matrix[x-1,y-1]);
+    return (matrix[x,y]);
 }
 
 
