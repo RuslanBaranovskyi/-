@@ -15,7 +15,9 @@ int col = Convert.ToInt32(Console.ReadLine());
 int[,] resultArray = CreateMatrixRndInt(row, col, -10, 10);
 PrintArray(resultArray);
 
-GetElem(resultArray);
+double[] summarray = GetElem(resultArray);
+
+PrintSumArray(summarray);
 
 
 int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
@@ -50,19 +52,28 @@ void PrintArray(int[,] arr)
 
 }
 
-void GetElem(int[,] resultArray)
-{ 
-
-    for (int j = 0; j < resultArray.GetLength(1); j++)
-    {
-        double sum = 0;
-        for (int i = 0; i < resultArray.GetLength(0); i++)
+double[] GetElem(int[,] resultArray)
+{
+    double[] sumarray = new double[resultArray.GetLength(1)];
+        for (int j = 0; j < resultArray.GetLength(1); j++)
         {
-            sum = sum + resultArray[i, j];
+            double sum = 0;
+            for (int i = 0; i < resultArray.GetLength(0); i++)
+            {
+                sum = sum + resultArray[i, j];
+            }
+            sumarray[j] = sum / resultArray.GetLength(0);
         }
-        sum = sum / resultArray.GetLength(0);
-        Console.WriteLine($"Среднее арифметическое {j} столбца = {sum} ");
-        
+  
+    return sumarray;
+}
+
+void PrintSumArray(double[] summarray)
+{
+    for (int i = 0; i < resultArray.GetLength(0); i++)
+    {
+        Console.Write($"{Math.Round(summarray[i], 2),6}");
     }
+    Console.WriteLine();
 }
 
