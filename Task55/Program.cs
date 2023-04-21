@@ -21,22 +21,7 @@ if (CheckArray(resultArray))
 else
 Console.WriteLine("Матрица не является квадратной!");
 
-
-
-
 void EditArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < i; j++)
-        {
-            int temp = array[i, j];
-            array[i, j] = array[j, i];
-            array[j, i] = temp;
-        }
-    }
-}
-void EditArray2(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
