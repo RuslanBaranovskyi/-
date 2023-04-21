@@ -14,7 +14,7 @@ Console.WriteLine("Исходная матрица:");
 PrintArray(resultArray);
 if (CheckArray(resultArray))
 {
-    EditArray2(resultArray);
+    EditArray(resultArray);
     Console.WriteLine("Конечная матрица:");
     PrintArray(resultArray);
 }
