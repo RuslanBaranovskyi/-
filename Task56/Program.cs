@@ -77,27 +77,3 @@ int MinRowNumber(int[] arr)
     }
     return index;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
