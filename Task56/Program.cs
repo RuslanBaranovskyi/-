@@ -20,8 +20,6 @@ int[] sum = SumRows(resultArray);
 
 Console.WriteLine($"Номер строки с наименьшей суммой элементов = {MinRowNumber(sum)}");
 
-
-
 int[,] CreateArrayMatrix(int rows, int colum, int min, int max)
 {
     int[,] arr = new int[rows, colum];
